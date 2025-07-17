@@ -28,6 +28,9 @@ public class SelectionState implements State {
 
     @Override
     public void selectAmount(AtmMachine atmMachine, Card card, double amount) throws Exception {
+        if(amount%100 != 0){
+            throw new Exception("Insert Cash in the multiples of 100.");
+        }
         atmMachine.setRequestedMoney((int) amount);
         atmMachine.setAtmState(new DispenseState(atmMachine, card));
     }

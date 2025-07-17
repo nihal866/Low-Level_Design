@@ -23,7 +23,7 @@ public class Main {
 
             System.out.println("====== Inserting cash to withdraw ========");
             atmMachineState = atmMachine.getAtmState();
-            atmMachineState.selectAmount(atmMachine, card, 1356);
+            atmMachineState.selectAmount(atmMachine, card, 1700);
 
             displayBankDetails(card);
         } catch (Exception ex){
